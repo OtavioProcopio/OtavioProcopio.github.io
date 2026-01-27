@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Otávio Procópio - Desenvolvedor Fullstack em formação | Java & Spring Boot | Portfólio de Projetos">
+    <meta name="keywords" content="Desenvolvedor Fullstack, Java, Spring Boot, React, TypeScript, Portfolio">
+    <meta name="author" content="Otávio Procópio">
+    <title>Otávio Procópio | Fullstack Developer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-name">&lt;Otávio Procópio /&gt;</span>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="#projects" class="nav-link">Projetos</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="greeting">Olá, eu sou</span>
+                    <span class="name">Otávio Procópio</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    <span class="typing-text">Fullstack Developer</span>
+                </h2>
+                <p class="hero-description">
+                    Bem-vindo ao meu portfólio pessoal! Aqui demonstro meus projetos e habilidades como desenvolvedor, 
+                    com foco em <strong>Java, Spring Boot e desenvolvimento fullstack</strong>. Explore meus trabalhos 
+                    e veja na prática minha evolução técnica.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-code"></i> Ver Projetos
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Contato
+                    </a>
+                </div>
+            </div>
+            <div class="hero-social-box">
+                <h3>Conecte-se</h3>
+                <div class="hero-social">
+                    <a href="https://github.com/OtavioProcopio" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/otavio-procopio" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://wa.me/5535999876119" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">01.</span> Sobre Mim
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        A tecnologia sempre foi meu ambiente natural. Dos scripts de Tibia na infância aos 
+                        microcontroladores na eletrônica, sempre gostei de entender o funcionamento da máquina.
+                    </p>
+                    <p>
+                        Acabei seguindo carreira na <strong>indústria metalúrgica como Analista de Qualidade</strong>, 
+                        onde ganhei postura profissional e visão de processos, mas sentia falta da Tecnologia. 
+                        Decidi então pivotar minha carreira de volta para a minha essência.
+                    </p>
+                    <p>
+                        Não trago código da indústria, mas trago a "casca": a <strong>responsabilidade, maturidade 
+                        profissional e organização</strong>. Hoje, aplico essa experiência de mercado para ser um 
+                        desenvolvedor mais completo, focado em resolver problemas reais.
+                    </p>
+                    <p>
+                        Atualmente curso <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> e direciono 
+                        meus estudos para desenvolvimento backend e fullstack, com forte foco em Java, Spring Boot, 
+                        arquitetura de software e boas práticas.
+                    </p>
+                    <div class="about-highlight">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Não busco apenas "fazer funcionar", mas entender <strong>como e por que funciona</strong>.</p>
+                    </div>
+                </div>
+                <div class="about-info">
+                    <div class="info-card">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Experiência Industrial</h3>
+                        <p>Analista de Qualidade em fundição de aço com foco em processos e análise de dados</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Formação</h3>
+                        <ul>
+                            <li>Análise e Desenvolvimento de Sistemas</li>
+                            <li>Gestão da Qualidade</li>
+                            <li>Técnico em Eletrônica</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Objetivo</h3>
+                        <p>Oportunidade como Desenvolvedor Fullstack aplicando conhecimento técnico e visão de processos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">02.</span> Habilidades & Tecnologias
+            </h2>
+            <div class="skills-grid">
+                <!-- Backend -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="tech-list">
+                        <div class="tech-item">
+                            <i class="fab fa-java"></i>
+                            <span>Java 21</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Spring Security</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>Spring Data JPA</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-plug"></i>
+                            <span>REST API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-palette"></i> Frontend</h3>
+                    <div class="tech-list">
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i>
+                            <span>React 18/19</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js"></i>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>Vite</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-code"></i>
+                            <span>HTML5/CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Banco de Dados</h3>
+                    <div class="tech-list">
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>H2 Database</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Flyway</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-fire"></i>
+                            <span>Supabase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps & Tools -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> DevOps & Tools</h3>
+                    <div class="tech-list">
+                        <div class="tech-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git & GitHub</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>RabbitMQ</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-vial"></i>
+                            <span>JUnit & Vitest</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-book"></i>
+                            <span>Swagger/OpenAPI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & Integration -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-robot"></i> IA & Integração</h3>
+                    <div class="tech-list">
+                        <div class="tech-item">
+                            <i class="fas fa-brain"></i>
+                            <span>LangChain4j</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-gem"></i>
+                            <span>Google Gemini</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-microphone"></i>
+                            <span>ElevenLabs TTS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-android"></i>
+                            <span>Android SDK</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>N8N</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Methodologies -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-lightbulb"></i> Metodologias</h3>
+                    <div class="tech-list">
+                        <div class="tech-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Clean Code</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-cubes"></i>
+                            <span>Design Patterns</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Arquitetura em Camadas</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>DDD</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-sync"></i>
+                            <span>Event-Driven</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">03.</span> Projetos em Destaque
+            </h2>
+            <p class="section-description">
+                Projetos práticos que demonstram minhas habilidades técnicas e capacidade de resolver problemas reais
+            </p>
+
+            <!-- Project Cards -->
+            <div class="projects-grid">
+                <!-- VShape API -->
+                <div class="project-card" data-project="vshape">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div class="project-links">
+                            <button class="project-expand" aria-label="Ver detalhes">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="project-title">VShape API - Sistema para Academias</h3>
+                    <p class="project-description">
+                        API REST completa para gestão de academias com foco em treinos personalizados, 
+                        controle nutricional e acompanhamento de evolução física.
+                    </p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-dumbbell"></i>
+                            <span>CRUD completo de treinos e exercícios personalizados</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-utensils"></i>
+                            <span>Sistema de dietas com gestão de refeições e alimentos</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Autenticação JWT com Spring Security</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java 21</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Spring Security</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">JUnit</span>
+                    </div>
+                </div>
+
+                <!-- IA4J Audio Course Factory -->
+                <div class="project-card" data-project="ia4j">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="project-links">
+                            <button class="project-expand" aria-label="Ver detalhes">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="project-title">IA4J - Integrated Audio Course Factory</h3>
+                    <p class="project-description">
+                        Desenvolvi uma plataforma de geração automatizada de cursos em áudio orquestrada por <strong>IA Generativa</strong> 
+                        e processamento assíncrono escalável com RabbitMQ.
+                    </p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Orquestração de agentes IA com LangChain4j</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-microphone"></i>
+                            <span>TTS (Text-to-Speech) com ElevenLabs</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>Arquitetura Event-Driven com RabbitMQ</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java 21</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">LangChain4j</span>
+                        <span class="tech-tag">RabbitMQ</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Flyway</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                </div>
+
+                <!-- Soar Music Studios -->
+                <div class="project-card" data-project="soarmusic">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="project-links">
+                            <button class="project-expand" aria-label="Ver detalhes">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Soar Music Studios - Plataforma Institucional</h3>
+                    <p class="project-description">
+                        Desenvolvi uma plataforma web institucional de alta performance para cliente real, 
+                        <strong>em produção</strong>, com foco em experiência mobile-first.
+                    </p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Projeto real em produção (cliente ativo)</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Design System responsivo com Tailwind CSS</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Bundle otimizado (~120KB) com Vite</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React 19</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Vite</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">React Router</span>
+                        <span class="tech-tag">Vitest</span>
+                    </div>
+                </div>
+
+                <!-- RAP CQS -->
+                <div class="project-card" data-project="rap-cqs">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="project-links">
+                            <button class="project-expand" aria-label="Ver detalhes">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="project-title">RAP-CQS - Sistema de Controle de Qualidade</h3>
+                    <p class="project-description">
+                        Desenvolvi um sistema de gestão de qualidade industrial aplicando minha experiência real da indústria 
+                        em desenvolvimento fullstack.
+                    </p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-clipboard-check"></i>
+                            <span>Gestão de não conformidades e ações corretivas</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-wrench"></i>
+                            <span>Controle de ferramental e manutenções</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Dashboards e relatórios analíticos</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Supabase</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Vercel</span>
+                    </div>
+                </div>
+
+                <!-- Tibiadex Android -->
+                <div class="project-card" data-project="tibiadex">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fab fa-android"></i>
+                        </div>
+                        <div class="project-links">
+                            <button class="project-expand" aria-label="Ver detalhes">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Tibiadex Android</h3>
+                    <p class="project-description">
+                        Desenvolvi um aplicativo Android nativo de alta performance para consulta de dados em tempo real 
+                        do MMORPG Tibia via API REST externa.
+                    </p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Aplicativo Android nativo com Material Design 3</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-plug"></i>
+                            <span>Integração com TibiaData API (v4)</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-filter"></i>
+                            <span>Sistema avançado de filtragem em RecyclerViews</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java 11</span>
+                        <span class="tech-tag">Android SDK</span>
+                        <span class="tech-tag">Material Design</span>
+                        <span class="tech-tag">Volley</span>
+                        <span class="tech-tag">RecyclerView</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">04.</span> Contato
+            </h2>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h3>Vamos conversar?</h3>
+                    <p>
+                        Busco oportunidades como <strong>Desenvolvedor Fullstack</strong>. 
+                        Tenho forte base técnica, visão de processos e comprometimento com qualidade. 
+                        Vamos conversar!
+                    </p>
+                </div>
+                <div class="contact-links">
+                    <a href="https://github.com/OtavioProcopio" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <span class="link-title">GitHub</span>
+                            <span class="link-subtitle">@OtavioProcopio</span>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/otavio-procopio" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <span class="link-title">LinkedIn</span>
+                            <span class="link-subtitle">/otavio-procopio</span>
+                        </div>
+                    </a>
+                    <a href="mailto:tavinprocopio@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span class="link-title">Email</span>
+                            <span class="link-subtitle">tavinprocopio@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/5535999876119" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <span class="link-title">WhatsApp</span>
+                            <span class="link-subtitle">(35) 99987-6119</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Otávio Procópio. Desenvolvido sem frameworks, com muito código e café ☕</p>
+            <p class="footer-note">Este portfólio reflete minha evolução prática, técnica e conceitual como desenvolvedor.</p>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div id="imageLightbox" class="image-lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImage">
+        <div id="lightboxCaption"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
