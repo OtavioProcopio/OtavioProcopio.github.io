@@ -85,12 +85,27 @@ document.querySelectorAll('.project-card, .skill-category, .info-card').forEach(
 });
 
 // ===================================
-// PROJECT MODAL FUNCTIONALITY
+// PROJECT MODAL FUNCTIONALITY WITH DEEP LINKING
 // ===================================
 const modal = document.getElementById('projectModal');
 const modalBody = document.getElementById('modalBody');
 const modalClose = document.querySelector('.modal-close');
 const modalOverlay = document.querySelector('.modal-overlay');
+
+// Mapeia URLs amigáveis para IDs de projeto
+const projectUrlMapping = {
+    'soar-music': 'soarmusic',
+    'rap-cqs': 'rap-cqs',
+    'ia4j': 'ia4j',
+    'vshape': 'vshape',
+    'tibiadex': 'tibiadex'
+};
+
+// Função para obter o projeto do hash da URL
+function getProjectFromHash() {
+    const hash = window.location.hash.substring(1); // Remove o '#'
+    return projectUrlMapping[hash] || hash;
+}
 
 // Project data with images and detailed information
 const projectData = {
@@ -304,7 +319,7 @@ const projectData = {
             { src: 'assets/projects/images/soarmusic/faq.png', caption: 'FAQ - Perguntas frequentes com accordion interativo' },
             { src: 'assets/projects/images/soarmusic/contatos.png', caption: 'Contato - Formulário e informações de contato de todas as unidades' },
             { src: 'assets/projects/images/soarmusic/rodape.png', caption: 'Rodapé - Links rápidos, redes sociais e informações institucionais' },
-            { src: 'assets/projects/images/soarmusic/tools.png', caption: 'Stack de Ferramentas - Tecnologias utilizadas no desenvolvimento' },
+            { src: 'assets/projects/images/soarmusic/tools.png', caption: 'Ferramentas do Músico - Ferramentas como afinador e metrônomo' },
             { src: 'assets/projects/images/soarmusic/soar-music-vercel-overview.png', caption: 'Deploy Vercel - Dashboard de produção com métricas de performance' },
             { src: 'assets/projects/images/soarmusic/DSN-management-Cloudflare.png', caption: 'DNS Cloudflare - Gestão de domínio e CDN para alta disponibilidade' }
         ],
@@ -456,8 +471,7 @@ const projectData = {
             { src: 'assets/projects/images/tibiadex/java-entities.png', caption: 'Código Java - Estrutura de entidades POJO para parsing' },
             { src: 'assets/projects/images/tibiadex/api-constants.png', caption: 'API Constants - Centralização de endpoints da TibiaData API' },
             { src: 'assets/projects/images/tibiadex/spell-androidstudio-ambient.png', caption: 'Android Studio - Ambiente de desenvolvimento da activity de Spells' },
-            { src: 'assets/projects/images/tibiadex/ambieente dev android.png', caption: 'DevTools Android - IDE configurado para desenvolvimento' },
-            { src: 'assets/projects/images/tibiadex/Screenshot 2025-12-08 202455.png', caption: 'Screenshot do App - Interface em execução no emulador' }
+            { src: 'assets/projects/images/tibiadex/ambieente dev android.png', caption: 'DevTools Android - IDE configurado para desenvolvimento' }
         ],
         highlights: [
             'Singleton Pattern aplicado em VolleySingleton para RequestQueue global',
@@ -480,9 +494,17 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-function openProjectModal(projectId) {
+function openProjectModal(projectId, updateUrl = true) {
     const project = projectData[projectId];
     if (!project) return;
+    
+    // Atualiza a URL sem recarregar a página
+    if (updateUrl) {
+        const urlFriendlyId = Object.keys(projectUrlMapping).find(
+            key => projectUrlMapping[key] === projectId
+        ) || projectId;
+        history.pushState(null, '', `#${urlFriendlyId}`);
+    }
     
     let imagesHTML = '';
     if (project.images && project.images.length > 0) {
@@ -561,6 +583,12 @@ function openProjectModal(projectId) {
 function closeModal() {
     modal.classList.remove('active');
     document.body.style.overflow = '';
+    
+    // Remove o hash da URL ao fechar o modal
+    const currentHash = window.location.hash;
+    if (currentHash && Object.keys(projectUrlMapping).includes(currentHash.substring(1))) {
+        history.pushState(null, '', window.location.pathname);
+    }
 }
 
 modalClose.addEventListener('click', closeModal);
@@ -570,6 +598,24 @@ modalOverlay.addEventListener('click', closeModal);
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('active')) {
         closeModal();
+    }
+});
+
+// Detecta mudanças no hash (navegação back/forward)
+window.addEventListener('hashchange', () => {
+    const projectId = getProjectFromHash();
+    if (projectData[projectId]) {
+        openProjectModal(projectId, false);
+    } else if (modal.classList.contains('active')) {
+        closeModal();
+    }
+});
+
+// Abre modal automaticamente se houver hash na URL ao carregar a página
+window.addEventListener('load', () => {
+    const projectId = getProjectFromHash();
+    if (projectData[projectId]) {
+        openProjectModal(projectId, false);
     }
 });
 
