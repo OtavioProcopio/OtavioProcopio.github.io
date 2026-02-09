@@ -49,8 +49,19 @@ navLinks.forEach(link => {
 // ===================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        const hash = href.substring(1);
+        
+        // Lista de hashes de projetos - não aplicar smooth scroll
+        const projectHashes = ['soar-music', 'rap-cqs', 'ia4j', 'vshape', 'tibiadex', 'soarmusic'];
+        
+        // Se for um hash de projeto, não fazer smooth scroll
+        if (projectHashes.includes(hash)) {
+            return;
+        }
+        
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(href);
         
         if (target) {
             const offsetTop = target.offsetTop - 80;
@@ -611,13 +622,23 @@ window.addEventListener('hashchange', () => {
     }
 });
 
-// Abre modal automaticamente se houver hash na URL ao carregar a página
-window.addEventListener('load', () => {
+// Função para abrir modal baseado no hash da URL
+function checkAndOpenProjectFromHash() {
     const projectId = getProjectFromHash();
     if (projectData[projectId]) {
-        openProjectModal(projectId, false);
+        // Pequeno delay para garantir que o DOM está pronto
+        setTimeout(() => {
+            openProjectModal(projectId, false);
+        }, 100);
     }
-});
+}
+
+// Abre modal automaticamente se houver hash na URL ao carregar a página
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', checkAndOpenProjectFromHash);
+} else {
+    checkAndOpenProjectFromHash();
+}
 
 // ===================================
 // TYPING EFFECT FOR HERO
